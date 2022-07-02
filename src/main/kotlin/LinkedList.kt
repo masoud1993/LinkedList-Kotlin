@@ -85,4 +85,16 @@ class LinkedList<T> {
         return last!!.value
     }
 
+    fun findMiddle(): Node<T> ? {
+        var slow = head
+        var fast = head
+
+        while (fast?.next != null){
+            fast = fast.next?.next
+            slow = slow?.next
+        }
+
+        return slow
+    }
+
 }
